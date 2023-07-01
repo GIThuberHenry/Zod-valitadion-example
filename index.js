@@ -12,7 +12,7 @@ app.post('/api/register', (req, res) => {
         const {nim, angkatan} = req.body
 
         const result = userSchema.safeParse(req.body)
-s
+
         return res.status(200).send(result)
     }catch(err){
         return res.status(500).send({message: err.message})
